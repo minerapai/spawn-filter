@@ -7,6 +7,12 @@
 - 필요한 모드: Cobblemon, Fabric API
 - 설치: 서버와 클라이언트 모두에 넣어야 화면(UI)을 쓸 수 있습니다. 모드가 없는 사람도 서버에 접속은 할 수 있습니다.
 
+## 다운로드
+
+**[⬇ spawn-filter-1.10.1.jar 다운로드](https://github.com/minerapai/spawn-filter/releases/download/v1.10.1/spawn-filter-1.10.1.jar)**
+
+받은 jar 파일을 마인크래프트(또는 서버) 폴더의 `mods` 폴더에 넣으면 됩니다. 다른 버전은 [Releases](https://github.com/minerapai/spawn-filter/releases) 에 있습니다.
+
 ## 기능
 
 - 지방별 스폰 허용/차단
