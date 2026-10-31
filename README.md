@@ -28,16 +28,25 @@
 
 ## 사용법
 
+모든 명령어는 서버 관리자(OP)만 쓸 수 있습니다.
+
 | 명령어 | 설명 |
 |---|---|
-| `/spawnfilter regions allow|deny <지방>` | (OP) 지방 허용/차단 |
-| `/spawnfilter area ...` | (OP) 구역 추가/편집 |
-| `/spawnfilter outside ...` | (OP) 경계 밖 설정 |
-| `/spawnfilter rates (ui)` | (OP) 스폰 확률 화면 |
-| `/spawnfilter apply` | (OP) 설정 적용 (스폰 목록 다시 읽기) |
-| `/spawnfilter cleanup` | (OP) 허용되지 않은 포켓몬 정리 |
+| `/spawnfilter` | 지금 설정 보기 |
+| `/spawnfilter ui` | 지방 선택 화면 (클라이언트 모드 없어도 됨) |
+| `/spawnfilter rates` | 구역 / 스폰 확률 화면 (클라이언트 모드 필요) |
+| `/spawnfilter regions <지방들>` | 허용할 지방 (예: `kanto,johto`) |
+| `/spawnfilter area <x1> <z1> <x2> <z2>` | 맵 경계 (`area clear`로 없애기) |
+| `/spawnfilter outside <지방들>` | 경계 바깥에 나올 지방 (`all` 가능) |
+| `/spawnfilter allow <포켓몬들>` | 항상 나오게 할 포켓몬 |
+| `/spawnfilter deny <포켓몬들>` | 절대 안 나오게 할 포켓몬 |
+| `/spawnfilter enabled <true/false>` | 지방 필터 켜기 / 끄기 |
+| `/spawnfilter removeExisting <true/false>` | 이미 있는 허용되지 않은 포켓몬 정리 여부 |
+| `/spawnfilter cleanup` | 로드된 허용되지 않은 야생 포켓몬 바로 정리 |
+| `/spawnfilter apply` | 바꾼 지방 설정 적용 (스폰 목록 다시 읽기) |
 
-(OP) 표시가 있는 명령어는 서버 관리자(OP)만 쓸 수 있습니다.
+단축키 (클라이언트에 모드가 있을 때): `[` 지방 선택 화면, `]` 구역 / 스폰 확률 화면, `\` 구역 표시 켜기 / 끄기
+
 
 ## 빌드
 
