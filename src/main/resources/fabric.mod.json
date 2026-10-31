@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "spawnfilter",
+  "version": "${version}",
+  "name": "Spawn Filter",
+  "description": "Only lets pokemon of the configured regions (kanto, johto, ...) spawn naturally. Evolution and breeding are not affected. Includes a spawn rate screen (/spawnfilter rates) for clients that have the mod; others can still join.",
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "kr.spawnfilter.SpawnFilter"
+    ],
+    "client": [
+      "kr.spawnfilter.client.SpawnFilterClient"
+    ]
+  },
+  "mixins": [
+    "spawnfilter.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "1.21.1",
+    "fabric-api": "*",
+    "cobblemon": ">=1.7.0"
+  }
+}
