@@ -37,7 +37,7 @@ public final class SpawnFilterConfig {
         "In game (op level 2): /spawnfilter, then /spawnfilter apply (runs /reload) to apply changes");
 
     private static volatile boolean enabled = true;
-    private static volatile Set<Region> regions = Set.of(Region.KANTO);
+    private static volatile Set<Region> regions = Set.of(Region.values()); // every region: nothing changes until set
     private static volatile Set<String> allow = Set.of();
     private static volatile Set<String> deny = Set.of();
     private static volatile boolean removeExisting = true;
@@ -220,7 +220,7 @@ public final class SpawnFilterConfig {
         enabled = Boolean.parseBoolean(p.getProperty("enabled", "true").trim());
         Set<Region> parsed = new LinkedHashSet<>();
 
-        for (String id : split(p.getProperty("regions", "kanto"))) {
+        for (String id : split(p.getProperty("regions", String.join(",", Region.ids())))) {
             Region region = Region.byId(id);
 
             if (region != null) {
