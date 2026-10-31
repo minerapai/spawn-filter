@@ -1,0 +1,36 @@
+# Spawn Filter (스폰 필터)
+
+설정한 지방(관동, 성도 ...)의 포켓몬만 자연 스폰되게 하는 모드입니다. 진화와 교배에는 영향을 주지 않습니다.
+
+- 버전: 1.10.1
+- Minecraft 1.21.1 / Fabric
+- 필요한 모드: Cobblemon, Fabric API
+- 설치: 서버와 클라이언트 모두에 넣어야 화면(UI)을 쓸 수 있습니다. 모드가 없는 사람도 서버에 접속은 할 수 있습니다.
+
+## 기능
+
+- 지방별 스폰 허용/차단
+- 구역(area)마다 다른 지방 / 포켓몬 배율 / 강제 스폰 설정
+- 경계 밖에 나올 지방 설정
+- 스폰 확률 설정 화면 (클라이언트에도 모드가 있어야 열림)
+
+## 사용법
+
+| 명령어 | 설명 |
+|---|---|
+| `/spawnfilter regions allow|deny <지방>` | (OP) 지방 허용/차단 |
+| `/spawnfilter area ...` | (OP) 구역 추가/편집 |
+| `/spawnfilter outside ...` | (OP) 경계 밖 설정 |
+| `/spawnfilter rates (ui)` | (OP) 스폰 확률 화면 |
+| `/spawnfilter apply` | (OP) 설정 적용 (스폰 목록 다시 읽기) |
+| `/spawnfilter cleanup` | (OP) 허용되지 않은 포켓몬 정리 |
+
+(OP) 표시가 있는 명령어는 서버 관리자(OP)만 쓸 수 있습니다.
+
+## 빌드
+
+```bash
+./gradlew build
+```
+
+`build/libs/` 에 만들어진 jar 파일을 서버의 `mods` 폴더에 넣습니다.
